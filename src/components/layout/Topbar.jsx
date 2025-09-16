@@ -5,34 +5,32 @@ import { TbBrandMeta } from "react-icons/tb";
 import { TfiEmail } from "react-icons/tfi";
 
 // Static state (text)
-import topbarText from "../../assets/staticState/staticText";
+import { topbarText } from "../../assets/staticState/staticText";
+const _emailIcon = topbarText.contactIcons[0];
 
 const Topbar = () => {
   return (
     <div className="bg-red text-white">
       <div className="container mx-auto flex justify-between items-center py-3">
         <div className="hidden md:flex item-center space-x-4">
-          <a
-            href={topbarText.metaLink}
-            target="_blank"
-            className="hover:text-gray-300"
-          >
-            <TbBrandMeta className="h-5 w-5" />
-          </a>
-          <a
-            href={topbarText.instagramLink}
-            target="_blank"
-            className="hover:text-gray-300"
-          >
-            <IoLogoInstagram className="h-5 w-5" />
-          </a>
-          <a
-            href={topbarText.xLink}
-            target="_blank"
-            className="hover:text-gray-300"
-          >
-            <RiTwitterXLine className="h-5 w-5" />
-          </a>
+          {topbarText.mediaIcons.map((_icon, id) => (
+            <a
+              key={id}
+              href={
+                id === 0
+                  ? topbarText.mediaLinks[0]
+                  : id === 1
+                  ? topbarText.mediaLinks[1]
+                  : id === 2
+                  ? topbarText.mediaLinks[2]
+                  : ""
+              }
+              target="_blank"
+              className="hover:text-gray-300"
+            >
+              <_icon className="h-5 w-5" />
+            </a>
+          ))}
         </div>
 
         <div className="text-sm text-center flex-grow">
@@ -44,7 +42,7 @@ const Topbar = () => {
             target="_blank"
             className="hover:text-gray-300"
           >
-            <TfiEmail className="h-5 w-5" />
+            <_emailIcon className="h-5 w-5" />
           </a>
         </div>
       </div>
