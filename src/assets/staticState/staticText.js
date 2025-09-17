@@ -35,4 +35,7 @@ export const searchBarText = {
 
 export const cartDrawerText = {
   icons: [IoMdClose],
+  header: "Your shopping cart",
+  checkooutBtnText: "Checkout",
+  checkoutLeyend: "Shipping, taxes and discount coded calculaded at checkout.",
 };
