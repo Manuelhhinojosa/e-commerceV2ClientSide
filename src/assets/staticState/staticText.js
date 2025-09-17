@@ -1,7 +1,7 @@
 // React icons
 import { HiOutlineShoppingBag, HiOutlineUser } from "react-icons/hi";
 import { HiBars3BottomRight } from "react-icons/hi2";
-import { IoLogoInstagram } from "react-icons/io";
+import { IoLogoInstagram, IoMdClose } from "react-icons/io";
 import { RiTwitterXLine } from "react-icons/ri";
 import { TbBrandMeta } from "react-icons/tb";
 import { TfiEmail } from "react-icons/tfi";
@@ -26,7 +26,13 @@ export const navbarText = {
   navbarLinksText: ["men", "woman", "top wear", "bottom wear"],
   navbarIcons: [HiOutlineUser, HiOutlineShoppingBag, HiBars3BottomRight],
 };
-
+// SearchBar component
 export const searchBarText = {
   icons: [HiMagnifyingGlass, HiMiniXMark],
+};
+
+// CartDrawer component
+
+export const cartDrawerText = {
+  icons: [IoMdClose],
 };

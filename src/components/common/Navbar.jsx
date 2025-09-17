@@ -1,8 +1,12 @@
 // React router
 import { Link } from "react-router-dom";
 
+// React hooks
+import { useState } from "react";
+
 // Components
 import SearchBar from "./SearchBar";
+import CartDrawer from "../layout/CartDrawer";
 
 // Static state (text)
 import { navbarText } from "../../assets/staticState/staticText";
@@ -14,6 +18,14 @@ const Navbar = () => {
   const _userIcon = navbarText.navbarIcons[0];
   const _shoppingCartIcon = navbarText.navbarIcons[1];
   const _navbarBarsIcon = navbarText.navbarIcons[2];
+  // Logic state
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  //   functions
+  // handle toggle cart drawer
+  const toggleCartDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  };
 
   // return
   return (
@@ -46,7 +58,10 @@ const Navbar = () => {
             <_userIcon className="h-6 w-6 text-gray-700" />
           </Link>
           {/* Shopping cart icon */}
-          <button className="relative hover:text-black">
+          <button
+            onClick={toggleCartDrawer}
+            className="relative hover:text-black"
+          >
             <_shoppingCartIcon className="h-6 w-6 text-gray-700" />
             <span className="absolute -top-1 bg-red text-white text-xs rounded-full px-2 py-0.5">
               1
@@ -62,6 +77,7 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
+      <CartDrawer drawerOpen={drawerOpen} toggleCartDrawer={toggleCartDrawer} />
     </>
   );
 };
