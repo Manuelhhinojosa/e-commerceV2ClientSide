@@ -2,7 +2,7 @@
 import { HiOutlineShoppingBag, HiOutlineUser } from "react-icons/hi";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { IoLogoInstagram, IoMdClose } from "react-icons/io";
-import { RiTwitterXLine } from "react-icons/ri";
+import { RiDeleteBin3Line, RiTwitterXLine } from "react-icons/ri";
 import { TbBrandMeta } from "react-icons/tb";
 import { TfiEmail } from "react-icons/tfi";
 import { HiMagnifyingGlass, HiMiniXMark } from "react-icons/hi2";
@@ -34,8 +34,10 @@ export const searchBarText = {
 // CartDrawer component
 
 export const cartDrawerText = {
-  icons: [IoMdClose],
+  icons: [IoMdClose, RiDeleteBin3Line],
   header: "Your shopping cart",
   checkooutBtnText: "Checkout",
   checkoutLeyend: "Shipping, taxes and discount coded calculaded at checkout.",
+  buttonMinus: "-",
+  buttonAdd: "+",
 };
