@@ -61,7 +61,9 @@ const CartContents = () => {
             </div>
           </div>
           <div>
-            <p>${product.price.toLocaleString()}</p>
+            <p>
+              {cartDrawerText.moneySign} {product.price.toLocaleString()}
+            </p>
             <button>
               <_deleteIcon className="h-6 w-6 mt-2 text-red" />
             </button>

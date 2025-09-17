@@ -24,7 +24,13 @@ export const topbarText = {
 export const navbarText = {
   logo: "logo",
   navbarLinksText: ["men", "woman", "top wear", "bottom wear"],
-  navbarIcons: [HiOutlineUser, HiOutlineShoppingBag, HiBars3BottomRight],
+  navbarIcons: [
+    HiOutlineUser,
+    HiOutlineShoppingBag,
+    HiBars3BottomRight,
+    IoMdClose,
+  ],
+  headerText: "Menu",
 };
 // SearchBar component
 export const searchBarText = {
@@ -40,4 +46,5 @@ export const cartDrawerText = {
   checkoutLeyend: "Shipping, taxes and discount coded calculaded at checkout.",
   buttonMinus: "-",
   buttonAdd: "+",
+  moneySign: "$",
 };

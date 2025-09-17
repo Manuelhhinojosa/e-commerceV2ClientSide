@@ -18,13 +18,20 @@ const Navbar = () => {
   const _userIcon = navbarText.navbarIcons[0];
   const _shoppingCartIcon = navbarText.navbarIcons[1];
   const _navbarBarsIcon = navbarText.navbarIcons[2];
+  const _closeIcon = navbarText.navbarIcons[3];
   // Logic state
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [navDrawerOpen, setNavDrawerOpen] = useState(true);
 
   //   functions
   // handle toggle cart drawer
   const toggleCartDrawer = () => {
     setDrawerOpen(!drawerOpen);
+  };
+
+  //   Hanlde toggle navbar
+  const toggleNavDrawer = () => {
+    setNavDrawerOpen(!navDrawerOpen);
   };
 
   // return
@@ -72,12 +79,42 @@ const Navbar = () => {
             <SearchBar />
           </div>
           {/* Navbar button icon */}
-          <button className="md:hidden">
+          <button onClick={toggleNavDrawer} className="md:hidden">
             <_navbarBarsIcon className="h-6 w-6 text-gray-700 " />
           </button>
         </div>
       </nav>
+      {/* CartDrawer component */}
       <CartDrawer drawerOpen={drawerOpen} toggleCartDrawer={toggleCartDrawer} />
+      {/* mobile navbar */}
+      <div
+        className={`fixed top-0 left-0 w-3/4 sm:w-1/2 md:w-1/3 h-full bg-white shadow-lg transform transition-transform duration-300 z-50 ${
+          navDrawerOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="flex justify-end p-4">
+          <button onClick={toggleNavDrawer}>
+            <_closeIcon className="h-6 w-6 text-gray-600 hover:text-black" />
+          </button>
+        </div>
+        <div className="p-4 ">
+          <h2 className="text-xl font-semibold  text-center mb-4">
+            {navbarText.headerText}
+          </h2>
+          <nav className="space-y-5 text-center">
+            {navbarText.navbarLinksText.map((linkText, id) => (
+              <Link
+                key={id}
+                to={"#"}
+                onClick={toggleNavDrawer}
+                className="block text-gray-600 hover:text-white hover:bg-black rounded-xl duration-300"
+              >
+                {linkText}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </div>
     </>
   );
 };
