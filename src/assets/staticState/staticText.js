@@ -5,6 +5,7 @@ import { IoLogoInstagram } from "react-icons/io";
 import { RiTwitterXLine } from "react-icons/ri";
 import { TbBrandMeta } from "react-icons/tb";
 import { TfiEmail } from "react-icons/tfi";
+import { HiMagnifyingGlass, HiMiniXMark } from "react-icons/hi2";
 
 // Topbar component
 export const topbarText = {
@@ -24,4 +25,8 @@ export const navbarText = {
   logo: "logo",
   navbarLinksText: ["men", "woman", "top wear", "bottom wear"],
   navbarIcons: [HiOutlineUser, HiOutlineShoppingBag, HiBars3BottomRight],
+};
+
+export const searchBarText = {
+  icons: [HiMagnifyingGlass, HiMiniXMark],
 };

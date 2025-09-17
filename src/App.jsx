@@ -4,7 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Components
 import UserLayout from "./components/layout/UserLayout";
 
+// App component function
 const App = () => {
+  // return
   return (
     <BrowserRouter>
       <Routes>

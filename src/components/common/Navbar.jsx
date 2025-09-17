@@ -1,13 +1,21 @@
 // React router
 import { Link } from "react-router-dom";
 
+// Components
+import SearchBar from "./SearchBar";
+
 // Static state (text)
 import { navbarText } from "../../assets/staticState/staticText";
-const _userIcon = navbarText.navbarIcons[0];
-const _shoppingCartIcon = navbarText.navbarIcons[1];
-const _navbarBarsIcon = navbarText.navbarIcons[2];
 
+// Navbar component function
 const Navbar = () => {
+  // Static State
+  // Icons
+  const _userIcon = navbarText.navbarIcons[0];
+  const _shoppingCartIcon = navbarText.navbarIcons[1];
+  const _navbarBarsIcon = navbarText.navbarIcons[2];
+
+  // return
   return (
     <>
       <nav className="container mx-auto flex items-center justify-between py-4 px-6 ">
@@ -33,17 +41,24 @@ const Navbar = () => {
 
         {/* icons */}
         <div className="flex items-center space-x-4">
+          {/* User icon */}
           <Link to="/profile" className="hover:text-black">
             <_userIcon className="h-6 w-6 text-gray-700" />
           </Link>
+          {/* Shopping cart icon */}
           <button className="relative hover:text-black">
             <_shoppingCartIcon className="h-6 w-6 text-gray-700" />
             <span className="absolute -top-1 bg-red text-white text-xs rounded-full px-2 py-0.5">
               1
             </span>
           </button>
+          {/* SearchBar component */}
+          <div className="overflow-hidden">
+            <SearchBar />
+          </div>
+          {/* Navbar button icon */}
           <button className="md:hidden">
-            <_navbarBarsIcon className="h-6 w-6 text-gray-700" />
+            <_navbarBarsIcon className="h-6 w-6 text-gray-700 " />
           </button>
         </div>
       </nav>

@@ -1,18 +1,18 @@
-// React icons
-import { IoLogoInstagram } from "react-icons/io";
-import { RiTwitterXLine } from "react-icons/ri";
-import { TbBrandMeta } from "react-icons/tb";
-import { TfiEmail } from "react-icons/tfi";
-
 // Static state (text)
 import { topbarText } from "../../assets/staticState/staticText";
-const _emailIcon = topbarText.contactIcons[0];
 
+// Topbar component function
 const Topbar = () => {
+  // Static state
+  // icons
+  const _emailIcon = topbarText.contactIcons[0];
+
+  // return
   return (
     <div className="bg-red text-white">
       <div className="container mx-auto flex justify-between items-center py-3">
         <div className="hidden md:flex item-center space-x-4">
+          {/* Social media icons */}
           {topbarText.mediaIcons.map((_icon, id) => (
             <a
               key={id}
@@ -33,9 +33,12 @@ const Topbar = () => {
           ))}
         </div>
 
+        {/* Center text */}
         <div className="text-sm text-center flex-grow">
           <span>{topbarText.centerText}</span>
         </div>
+
+        {/* Contact icon */}
         <div className="text-sm hidden md:block">
           <a
             href={`mailto:${topbarText.contactEmail}`}
