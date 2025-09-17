@@ -6,6 +6,7 @@ import { RiDeleteBin3Line, RiTwitterXLine } from "react-icons/ri";
 import { TbBrandMeta } from "react-icons/tb";
 import { TfiEmail } from "react-icons/tfi";
 import { HiMagnifyingGlass, HiMiniXMark } from "react-icons/hi2";
+import { FiPhoneCall } from "react-icons/fi";
 
 // Topbar component
 export const topbarText = {
@@ -47,4 +48,35 @@ export const cartDrawerText = {
   buttonMinus: "-",
   buttonAdd: "+",
   moneySign: "$",
+};
+
+// Footer component
+export const footerText = {
+  text1: "Newsletter",
+  text2:
+    "Be the first to hear about new products, exclusive events, and online offers.",
+  text3: "Sign up and get 10% off in your first order.",
+  placeHolderFormText: "Enter your email",
+  subBtnText: "Subscribe",
+  text4: "Shop",
+  footerLinksText: [
+    "Men's Top Wear",
+    "Women's Top Wear",
+    "Men's Bottom Wear",
+    "Woman's Bottom Wear",
+  ],
+
+  text5: "Support",
+  footerTextLinks2: ["Contact Us", "About Us", "FAQs", "Features"],
+  text6: "Follow Us",
+  mediaLinks: [
+    "https://wwww.facebook.com",
+    "https://www.instagram.com",
+    "https://www.x.com",
+  ],
+  mediaIcons: [TbBrandMeta, IoLogoInstagram, RiTwitterXLine],
+  text7: "Call Us",
+  phoneIcon: [FiPhoneCall],
+  phoneNumberText: "+1 123 456 1234",
+  bottomText: "2025, MHH. All Rights Reserved.",
 };

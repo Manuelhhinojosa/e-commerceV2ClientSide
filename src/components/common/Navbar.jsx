@@ -21,7 +21,7 @@ const Navbar = () => {
   const _closeIcon = navbarText.navbarIcons[3];
   // Logic state
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [navDrawerOpen, setNavDrawerOpen] = useState(true);
+  const [navDrawerOpen, setNavDrawerOpen] = useState(false);
 
   //   functions
   // handle toggle cart drawer
