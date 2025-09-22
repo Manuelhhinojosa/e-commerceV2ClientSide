@@ -80,3 +80,10 @@ export const footerText = {
   phoneNumberText: "+1 123 456 1234",
   bottomText: "2025, MHH. All Rights Reserved.",
 };
+
+export const heroText = {
+  headerText: "Vacation",
+  headerText2: "Ready",
+  headerText3: "Explore our vacation ready outfits with worldwide shipping.",
+  heroBtnText: "Shop now",
+};
