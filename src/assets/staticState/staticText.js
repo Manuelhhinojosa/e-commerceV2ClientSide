@@ -87,3 +87,11 @@ export const heroText = {
   headerText3: "Explore our vacation ready outfits with worldwide shipping.",
   heroBtnText: "Shop now",
 };
+
+export const genderCollectionSectionText = {
+  text: "Women's Collection",
+  text2: "Shop Now",
+  text3: "Men's Collection",
+  link1: "/collections/all?gender=Women",
+  link2: "/collections/all?gender=Men",
+};
