@@ -11,9 +11,9 @@ const UserLayout = () => {
   return (
     <>
       <Header />
-      <manin>
+      <main>
         <Outlet />
-      </manin>
+      </main>
       <Footer />
     </>
   );

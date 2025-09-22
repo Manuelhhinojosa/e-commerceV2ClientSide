@@ -37,7 +37,7 @@ const Footer = () => {
           <h3 className="text-lg text-gray-800 mb-4">{footerText.text4}</h3>
           <ul className="space-y-2 text-gray-600 ">
             {footerText.footerLinksText.map((linkText, id) => (
-              <li>
+              <li key={id}>
                 <Link
                   key={id}
                   to={"#"}
@@ -54,7 +54,7 @@ const Footer = () => {
           <h3 className="text-lg text-gray-800 mb-4">{footerText.text5}</h3>
           <ul className="space-y-2 text-gray-600 ">
             {footerText.footerTextLinks2.map((linkText, id) => (
-              <li>
+              <li key={id}>
                 <Link
                   key={id}
                   to={"#"}
@@ -85,7 +85,7 @@ const Footer = () => {
           <p className="text-gray-500 ">{footerText.text7}</p>
           <p>
             {footerText.phoneIcon.map((_icon, id) => (
-              <_icon className="inline-block mr-2" />
+              <_icon key={id} className="inline-block mr-2" />
             ))}
             {footerText.phoneNumberText}
           </p>

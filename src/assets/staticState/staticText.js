@@ -7,6 +7,7 @@ import { TbBrandMeta } from "react-icons/tb";
 import { TfiEmail } from "react-icons/tfi";
 import { HiMagnifyingGlass, HiMiniXMark } from "react-icons/hi2";
 import { FiPhoneCall } from "react-icons/fi";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 // Topbar component
 export const topbarText = {
@@ -94,4 +95,101 @@ export const genderCollectionSectionText = {
   text3: "Men's Collection",
   link1: "/collections/all?gender=Women",
   link2: "/collections/all?gender=Men",
+};
+
+export const newArrivalsText = {
+  text: "New Arrivals",
+  text2:
+    "Discover the latest styles straight off the runway, freshly added to keep your wardrobe on the cutting edge of fashion",
+  scrollIcons: [FiChevronLeft, FiChevronRight],
+  newProducts: [
+    {
+      _id: "1",
+      name: "Stylish Jacket",
+      Price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=1",
+          altText: "product",
+        },
+      ],
+    },
+    {
+      _id: "2",
+      name: "Stylish Jacket",
+      Price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=2",
+          altText: "product",
+        },
+      ],
+    },
+    {
+      _id: "3",
+      name: "Stylish Jacket",
+      Price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=3",
+          altText: "product",
+        },
+      ],
+    },
+    {
+      _id: "4",
+      name: "Stylish Jacket",
+      Price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=4",
+          altText: "product",
+        },
+      ],
+    },
+    {
+      _id: "5",
+      name: "Stylish Jacket",
+      Price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=5",
+          altText: "product",
+        },
+      ],
+    },
+    {
+      _id: "6",
+      name: "Stylish Jacket",
+      Price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=6",
+          altText: "product",
+        },
+      ],
+    },
+    {
+      _id: "7",
+      name: "Stylish Jacket",
+      Price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=7",
+          altText: "product",
+        },
+      ],
+    },
+    {
+      _id: "8",
+      name: "Stylish Jacket",
+      Price: 120,
+      images: [
+        {
+          url: "https://picsum.photos/500/500?random=8",
+          altText: "product",
+        },
+      ],
+    },
+  ],
 };
