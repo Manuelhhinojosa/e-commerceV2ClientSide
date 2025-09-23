@@ -1,6 +1,9 @@
 // React hooks
 import { useState, useEffect } from "react";
 
+// components
+import ProductGrid from "./ProductGrid";
+
 // Sonner's Toast for notification
 import { toast } from "sonner";
 
@@ -204,6 +207,12 @@ const ProductDetails = () => {
               </table>
             </div>
           </div>
+        </div>
+        <div className="mt-20">
+          <h2 className="text-2xl text-center font-medium mb-4">
+            {productDetailsText.text}
+          </h2>
+          <ProductGrid />
         </div>
       </div>
     </div>
