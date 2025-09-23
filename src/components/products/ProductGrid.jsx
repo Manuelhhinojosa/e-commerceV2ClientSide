@@ -2,10 +2,8 @@
 import { Link } from "react-router-dom";
 
 // state
-import { productGridText } from "../../assets/staticState/staticText";
-
 // static state (text)
-import(productGridText);
+import { productGridText } from "../../assets/staticState/staticText";
 
 // ProductGrid function component
 const ProductGrid = () => {

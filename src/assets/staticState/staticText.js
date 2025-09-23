@@ -82,6 +82,11 @@ export const footerText = {
   bottomText: "2025, MHH. All Rights Reserved.",
 };
 
+// Home component
+export const homeText = {
+  text: "Top Wears For Women",
+};
+
 // Hero component
 export const heroText = {
   headerText: "Vacation",
