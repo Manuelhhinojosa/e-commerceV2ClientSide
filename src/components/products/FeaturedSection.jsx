@@ -1,16 +1,15 @@
 // state
 // static state (text)
 import { featuredSectionText } from "../../assets/staticState/staticText";
-// icons
-const _shopingBagIcon = featuredSectionText.icons[0];
-const _arrowIcon = featuredSectionText.icons[1];
-const _creditCardIcon = featuredSectionText.icons[2];
-
-// static state (text)
-import(featuredSectionText);
 
 // FeaturedSection function component
 const FeaturedSection = () => {
+  // state
+  // static state (icons)
+  const _shopingBagIcon = featuredSectionText.icons[0];
+  const _arrowIcon = featuredSectionText.icons[1];
+  const _creditCardIcon = featuredSectionText.icons[2];
+
   //   return
   return (
     <section className="py-16 px-4 bg-white ">
