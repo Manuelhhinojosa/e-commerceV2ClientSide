@@ -1,9 +1,23 @@
+// React hooks
+import { useState, useEffect } from "react";
+
 // State
 // static state (text)
 import { productDetailsText } from "../../assets/staticState/staticText";
 
 // ProductDetails function component
 const ProductDetails = () => {
+  // state
+  // for img display onClick
+  const [mainImg, setMainImg] = useState("");
+
+  //   Functions
+  useEffect(() => {
+    if (productDetailsText.selectedProduct.images.length > 0) {
+      setMainImg(productDetailsText.selectedProduct.images[0].url);
+    }
+  }, [productDetailsText.selectedProduct]);
+
   // return
   return (
     <div className="p-6 ">
@@ -17,7 +31,10 @@ const ProductDetails = () => {
                 key={i}
                 src={img.url}
                 alt={img.altText}
-                className="w-20 h-20 object-cover rounded-lg cursor-pointer border"
+                className={`w-20 h-20 object-cover rounded-lg cursor-pointer border ${
+                  mainImg === img.url ? "border-black" : "border-gray-300"
+                }`}
+                onClick={() => setMainImg(img.url)}
               />
             ))}
           </div>
@@ -25,7 +42,7 @@ const ProductDetails = () => {
           <div className="md:w-1/2">
             <div className="mb-4">
               <img
-                src={productDetailsText.selectedProduct.images[0].url}
+                src={mainImg}
                 alt={productDetailsText.selectedProduct.images[0].altText}
                 className="w-full h-auto object-cover rounded-lg"
               />
@@ -38,7 +55,10 @@ const ProductDetails = () => {
                 key={i}
                 src={img.url}
                 alt={img.altText}
-                className="w-20 h-20 object-cover rounded-lg cursor-pointer border"
+                className={`w-20 h-20 object-cover rounded-lg cursor-pointer border ${
+                  mainImg === img.url ? "border-black" : "border-gray-300"
+                }`}
+                onClick={() => setMainImg(img.url)}
               />
             ))}
           </div>
