@@ -10,6 +10,7 @@ import { toast } from "sonner";
 // State
 // static state (text)
 import { productDetailsText } from "../../assets/staticState/staticText";
+import { productGridText } from "../../assets/staticState/staticText";
 
 // ProductDetails function component
 const ProductDetails = () => {
@@ -75,11 +76,19 @@ const ProductDetails = () => {
           {/* main imgage */}
           <div className="md:w-1/2">
             <div className="mb-4">
-              <img
+              {/* <img
                 src={mainImg}
                 alt={productDetailsText.selectedProduct.images[0].altText}
                 className="w-full h-auto object-cover rounded-lg"
-              />
+              /> */}
+
+              {mainImg && (
+                <img
+                  src={mainImg}
+                  alt={productDetailsText.selectedProduct.images[0].altText}
+                  className="w-full h-auto object-cover rounded-lg"
+                />
+              )}
             </div>
           </div>
           {/* mobile thumbnails */}
@@ -212,7 +221,7 @@ const ProductDetails = () => {
           <h2 className="text-2xl text-center font-medium mb-4">
             {productDetailsText.text}
           </h2>
-          <ProductGrid />
+          <ProductGrid products={productGridText.products} />
         </div>
       </div>
     </div>

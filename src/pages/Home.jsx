@@ -24,7 +24,7 @@ const Home = () => {
       <ProductDetails />
       <div className="container mx-auto">
         <h2 className="text-3xl text-center font-bold mb-4">{homeText.text}</h2>
-        <ProductGrid />
+        <ProductGrid products={homeText.placeholderProducts} />
       </div>
     </div>
   );

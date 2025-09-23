@@ -1,16 +1,12 @@
 // React router
 import { Link } from "react-router-dom";
 
-// state
-// static state (text)
-import { productGridText } from "../../assets/staticState/staticText";
-
 // ProductGrid function component
-const ProductGrid = () => {
+const ProductGrid = ({ products = [] }) => {
   // retrun
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-      {productGridText.products.map((product, i) => (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {products.map((product, i) => (
         <Link key={i} to={`/product/${product._id}`} className="block">
           <div className="bg-white p-4 rounded-lg">
             <div className="w-full h-96 mb-4 ">
