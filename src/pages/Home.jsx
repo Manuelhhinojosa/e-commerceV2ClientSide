@@ -4,6 +4,7 @@ import GenderCollectionSection from "../components/products/GenderColletionSecti
 import NewArrivals from "../components/products/NewArrivals";
 import ProductDetails from "../components/products/ProductDetails";
 import ProductGrid from "../components/products/ProductGrid";
+import FeaturedCollection from "../components/products/FeaturedCollection";
 
 // State
 // Static state (text)
@@ -26,6 +27,7 @@ const Home = () => {
         <h2 className="text-3xl text-center font-bold mb-4">{homeText.text}</h2>
         <ProductGrid products={homeText.placeholderProducts} />
       </div>
+      <FeaturedCollection />
     </div>
   );
 };

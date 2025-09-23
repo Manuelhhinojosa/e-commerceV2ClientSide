@@ -1,13 +1,15 @@
 // React icons
 import { HiOutlineShoppingBag, HiOutlineUser } from "react-icons/hi";
-import { HiBars3BottomRight } from "react-icons/hi2";
 import { IoLogoInstagram, IoMdClose } from "react-icons/io";
 import { RiDeleteBin3Line, RiTwitterXLine } from "react-icons/ri";
 import { TbBrandMeta } from "react-icons/tb";
 import { TfiEmail } from "react-icons/tfi";
-import { HiMagnifyingGlass, HiMiniXMark } from "react-icons/hi2";
-import { FiPhoneCall } from "react-icons/fi";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import {
+  HiMagnifyingGlass,
+  HiMiniXMark,
+  HiBars3BottomRight,
+} from "react-icons/hi2";
+import { FiChevronLeft, FiChevronRight, FiPhoneCall } from "react-icons/fi";
 
 // Topbar component
 export const topbarText = {
@@ -310,23 +312,13 @@ export const productGridText = {
       price: 100,
       images: [{ url: "https://picsum.photos/500/500?random=4" }],
     },
-    // {
-    //   _id: 5,
-    //   name: "Product 5",
-    //   price: 100,
-    //   images: [{ url: "https://picsum.photos/500/500?random=5" }],
-    // },
-    // {
-    //   _id: 6,
-    //   name: "Product 6",
-    //   price: 100,
-    //   images: [{ url: "https://picsum.photos/500/500?random=6" }],
-    // },
-    // {
-    //   _id: 7,
-    //   name: "Product 7",
-    //   price: 100,
-    //   images: [{ url: "https://picsum.photos/500/500?random=7" }],
-    // },
   ],
+};
+
+export const featuredCollectionText = {
+  text: "Comfort and Style",
+  text2: "Apparel made for your everyday life",
+  text3:
+    "Discover high-quality, comfortable clothing that effortlessly blends fashion and function. Designed to make you look good and feel great every day.",
+  text4: "Shop now",
 };
