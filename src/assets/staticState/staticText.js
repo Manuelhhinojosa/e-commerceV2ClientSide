@@ -34,13 +34,13 @@ export const navbarText = {
   ],
   headerText: "Menu",
 };
+
 // SearchBar component
 export const searchBarText = {
   icons: [HiMagnifyingGlass, HiMiniXMark],
 };
 
 // CartDrawer component
-
 export const cartDrawerText = {
   icons: [IoMdClose, RiDeleteBin3Line],
   header: "Your shopping cart",
@@ -82,6 +82,7 @@ export const footerText = {
   bottomText: "2025, MHH. All Rights Reserved.",
 };
 
+// Hero component
 export const heroText = {
   headerText: "Vacation",
   headerText2: "Ready",
@@ -89,6 +90,7 @@ export const heroText = {
   heroBtnText: "Shop now",
 };
 
+// GenderCollectionSection component
 export const genderCollectionSectionText = {
   text: "Women's Collection",
   text2: "Shop Now",
@@ -97,6 +99,7 @@ export const genderCollectionSectionText = {
   link2: "/collections/all?gender=Men",
 };
 
+// NewArrivals component
 export const newArrivalsText = {
   text: "New Arrivals",
   text2:
@@ -192,4 +195,34 @@ export const newArrivalsText = {
       ],
     },
   ],
+};
+
+// best seller section text (in home component)
+export const bestSellerText = {
+  text: "Best seller",
+};
+
+// ProductDetails component text
+export const productDetailsText = {
+  selectedProduct: {
+    name: "Sylish Jacket",
+    price: 120,
+    originalPrice: 150,
+    description: "This is a stylish jacket perfect for any occasion.",
+    brand: "MHH",
+    material: "Leather",
+    sizes: ["S", "M", "L", "XL"],
+    colors: ["Red", "Black"],
+    images: [
+      {
+        url: "https://picsum.photos/500/500?random=1",
+        altText: "Stylish Jacket 1",
+      },
+      {
+        url: "https://picsum.photos/500/500?random=2",
+        altText: "Stylish Jacket 2",
+      },
+    ],
+  },
+  buttonText: "Add to cart",
 };
