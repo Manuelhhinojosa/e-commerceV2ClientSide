@@ -1,5 +1,10 @@
 // React icons
-import { HiOutlineShoppingBag, HiOutlineUser } from "react-icons/hi";
+import {
+  HiOutlineShoppingBag,
+  HiOutlineUser,
+  HiShoppingBag,
+  HiOutlineCreditCard,
+} from "react-icons/hi";
 import { IoLogoInstagram, IoMdClose } from "react-icons/io";
 import { RiDeleteBin3Line, RiTwitterXLine } from "react-icons/ri";
 import { TbBrandMeta } from "react-icons/tb";
@@ -8,6 +13,7 @@ import {
   HiMagnifyingGlass,
   HiMiniXMark,
   HiBars3BottomRight,
+  HiArrowPathRoundedSquare,
 } from "react-icons/hi2";
 import { FiChevronLeft, FiChevronRight, FiPhoneCall } from "react-icons/fi";
 
@@ -321,4 +327,14 @@ export const featuredCollectionText = {
   text3:
     "Discover high-quality, comfortable clothing that effortlessly blends fashion and function. Designed to make you look good and feel great every day.",
   text4: "Shop now",
+};
+
+export const featuredSectionText = {
+  icons: [HiShoppingBag, HiArrowPathRoundedSquare, HiOutlineCreditCard],
+  text: "FREE INTERNATIONAL SHIPPING",
+  text2: "On all orders over $100.00",
+  text3: "45 DAYS RETURN",
+  text4: "Money back guarantee",
+  text5: "SECURE CHECOUT",
+  text6: "100% secured checkout process",
 };

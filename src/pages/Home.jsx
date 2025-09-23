@@ -5,6 +5,7 @@ import NewArrivals from "../components/products/NewArrivals";
 import ProductDetails from "../components/products/ProductDetails";
 import ProductGrid from "../components/products/ProductGrid";
 import FeaturedCollection from "../components/products/FeaturedCollection";
+import FeaturedSection from "../components/products/FeaturedSection";
 
 // State
 // Static state (text)
@@ -28,6 +29,7 @@ const Home = () => {
         <ProductGrid products={homeText.placeholderProducts} />
       </div>
       <FeaturedCollection />
+      <FeaturedSection />
     </div>
   );
 };
