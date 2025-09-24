@@ -339,7 +339,7 @@ export const featuredSectionText = {
   text6: "100% secured checkout process",
 };
 
-export const loginText = {
+export const loginAndRegisterText = {
   headerText: "Header Text",
   text: "Hey there!",
   text2: "Enter your username and password to Login",
@@ -348,4 +348,9 @@ export const loginText = {
   buttonText: "Sign in",
   questionText: "Don't have an account?",
   linkText: "Register",
+  text3: "Name",
+  text4: "Enter your name, email and password to create an account.",
+  buttonText2: "Sign Up",
+  linkText2: "Register",
+  text5: "Already have an account?",
 };

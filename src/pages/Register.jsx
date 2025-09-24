@@ -8,11 +8,12 @@ import { useState } from "react";
 // static State (Text)
 import { loginAndRegisterText } from "../assets/staticState/staticText";
 // from assets dir (static images)
-import login from "../assets/images/login.webp";
+import register from "../assets/images/register.webp";
 
 // Login function component
-const Login = () => {
+const Register = () => {
   // satate
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -20,7 +21,7 @@ const Login = () => {
   // Handle submit form function
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("form data:", { email, password });
+    console.log("form data:", { name, email, password });
   };
 
   //   return
@@ -39,7 +40,19 @@ const Login = () => {
           <h2 className="text-2xl font-bold text-center mb-6">
             {loginAndRegisterText.text}
           </h2>
-          <p className="text-center mb-6">{loginAndRegisterText.text2}</p>
+          <p className="text-center mb-6">{loginAndRegisterText.text4}</p>
+          <div className="mb-4 ">
+            <label className="block text-sm font-semibold mb-2">
+              {loginAndRegisterText.text3}
+            </label>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full p-2 border rounded"
+              placeholder={loginAndRegisterText.text3}
+            />
+          </div>
           <div className="mb-4 ">
             <label className="block text-sm font-semibold mb-2">
               {loginAndRegisterText.labelText}
@@ -68,12 +81,12 @@ const Login = () => {
             type="submit"
             className="w-full bg-black text-white p-2 rounded-lg font-semibold hover:bg-gray-800 transition"
           >
-            {loginAndRegisterText.buttonText}
+            {loginAndRegisterText.buttonText2}
           </button>
           <p className="mt-6 text-center text-sm">
-            {loginAndRegisterText.questionText} {""}
-            <Link to="/register" className="text-blue-500">
-              {loginAndRegisterText.linkText}
+            {loginAndRegisterText.text5} {""}
+            <Link to="/login" className="text-blue-500">
+              {loginAndRegisterText.buttonText}
             </Link>
           </p>
         </form>
@@ -81,7 +94,7 @@ const Login = () => {
       <div className="hidden md:block w-1/2 bg-gray-800">
         <div className="h-full flex flex-col justify-center items-center">
           <img
-            src={login}
+            src={register}
             alt="loginImg"
             className="h-[750px] w-full object-cover"
           />
@@ -91,4 +104,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
