@@ -3,10 +3,12 @@ import { useEffect, useRef, useState } from "react";
 
 // components
 import FilterSideBar from "../components/products/filterSideBar";
+import SortOptions from "../components/products/SortOptions";
 
 // state
 // static state (text & icons)
 import { collectionsPageText } from "../assets/staticState/staticText";
+import ProductGrid from "../components/products/ProductGrid";
 
 // CollectionsPage function component
 const CollectionsPage = () => {
@@ -126,6 +128,10 @@ const CollectionsPage = () => {
         <h2 className="text-2xl uppercase mb-4">
           {collectionsPageText.headerText}
         </h2>
+        {/* sorting options */}
+        <SortOptions />
+        {/* product grid */}
+        <ProductGrid products={products} />
       </div>
     </div>
   );

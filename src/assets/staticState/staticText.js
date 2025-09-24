@@ -322,6 +322,7 @@ export const productGridText = {
   ],
 };
 
+// FeaturedCollection component text
 export const featuredCollectionText = {
   text: "Comfort and Style",
   text2: "Apparel made for your everyday life",
@@ -330,6 +331,7 @@ export const featuredCollectionText = {
   text4: "Shop now",
 };
 
+// FeaturedSEction component text
 export const featuredSectionText = {
   icons: [HiShoppingBag, HiArrowPathRoundedSquare, HiOutlineCreditCard],
   text: "FREE INTERNATIONAL SHIPPING",
@@ -340,6 +342,7 @@ export const featuredSectionText = {
   text6: "100% secured checkout process",
 };
 
+// Login & Register components text
 export const loginAndRegisterText = {
   headerText: "Header Text",
   text: "Hey there!",
@@ -356,7 +359,7 @@ export const loginAndRegisterText = {
   text5: "Already have an account?",
 };
 
-// MyOrdersPage text
+// MyOrdersPage component text
 export const myOrdersPageText = {
   headerText: "My orders",
   thText1: "Image",
@@ -371,8 +374,38 @@ export const myOrdersPageText = {
   notPaidText: "Pending",
 };
 
-// CollectionsPage text
+// CollectionsPage component text
 export const collectionsPageText = {
   icons: [FaFilter],
   headerText: "All collection",
+};
+
+// FilterSideBar component text
+export const filterSideBarText = {
+  categories: ["Top Wear", "Bottom Wear"],
+  colors: [
+    "Red",
+    "Blue",
+    "Black",
+    "Green",
+    "Yellow",
+    "Grat",
+    "White",
+    "Pink",
+    "Beige",
+    "Navy",
+  ],
+  sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+  materials: [
+    "Cotton",
+    "Whool",
+    "Denim",
+    "Polyester",
+    "Silk",
+    "Linen",
+    "Viscose",
+    "Fleece",
+  ],
+  brands: ["Brand1", "Brand2", "Brand3", "Brand4", "Brand5", "Brand6"],
+  genders: ["Men", "Women"],
 };
