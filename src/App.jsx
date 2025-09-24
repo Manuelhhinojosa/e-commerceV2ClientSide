@@ -7,6 +7,7 @@ import { Toaster } from "sonner";
 // Components
 import UserLayout from "./components/layout/UserLayout";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 // App component function
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<UserLayout />}>
           <Route index element={<Home />} />
+          <Route path="login" element={<Login />} />
         </Route>
       </Routes>
     </BrowserRouter>
