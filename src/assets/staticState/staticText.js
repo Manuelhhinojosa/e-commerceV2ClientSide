@@ -354,3 +354,18 @@ export const loginAndRegisterText = {
   linkText2: "Register",
   text5: "Already have an account?",
 };
+
+// MyOrdersPage text
+export const myOrdersPageText = {
+  headerText: "My orders",
+  thText1: "Image",
+  thText2: "Order ID",
+  thText3: "Created",
+  thText4: "Shipping Address",
+  thText5: "Items",
+  thText6: "Price",
+  thText7: "Status",
+  tdTextNoOdersMessage: "You don't have any orders.",
+  paidText: "Paid",
+  notPaidText: "Pending",
+};
