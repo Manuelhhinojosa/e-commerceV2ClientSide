@@ -11,13 +11,14 @@ import { collectionsPageText } from "../assets/staticState/staticText";
 // CollectionsPage function component
 const CollectionsPage = () => {
   // State
-  //   static state (text and icons
+  //   static state (text and icons)
   const _filterIcon = collectionsPageText.icons[0];
 
   // for products
   const [products, setProducts] = useState([]);
   //   for side bar open and close logic
   const sidebarRef = useRef(null);
+  const buttonRef = useRef(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   //   functions
@@ -26,18 +27,21 @@ const CollectionsPage = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  //   to close sidebar upon clicking else on the screen
-
-  const handleClickOutside = (e) => {
-    if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
-      setIsSidebarOpen(false);
-    }
-  };
-
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
+    const handleClickOutside = (e) => {
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(e.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(e.target)
+      ) {
+        setIsSidebarOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("click", handleClickOutside);
     };
   }, []);
 
@@ -103,6 +107,7 @@ const CollectionsPage = () => {
     <div className="flex flex-col lg:flex-row">
       {/* mobile filter button */}
       <button
+        ref={buttonRef}
         onClick={toggleSidebar}
         className="lg:hidden border p-2 flex justify-center items-center "
       >
