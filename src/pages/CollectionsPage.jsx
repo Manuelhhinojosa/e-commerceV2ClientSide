@@ -1,5 +1,8 @@
 // React Hooks
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+// components
+import FilterSideBar from "../components/products/filterSideBar";
 
 // state
 // static state (text & icons)
@@ -13,9 +16,32 @@ const CollectionsPage = () => {
 
   // for products
   const [products, setProducts] = useState([]);
+  //   for side bar open and close logic
+  const sidebarRef = useRef(null);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   //   functions
-  // for fetching products upon page loading
+  // to toggle sideBar
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  //   to close sidebar upon clicking else on the screen
+
+  const handleClickOutside = (e) => {
+    if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
+      setIsSidebarOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // to fetch products upon page loading
   useEffect(() => {
     setTimeout(() => {
       const fetchedProducts = [
@@ -75,8 +101,26 @@ const CollectionsPage = () => {
   // return
   return (
     <div className="flex flex-col lg:flex-row">
-      <div className="lg:hidden border p-2 flex justify-center items-center ">
-        <_filterIcon />
+      {/* mobile filter button */}
+      <button
+        onClick={toggleSidebar}
+        className="lg:hidden border p-2 flex justify-center items-center "
+      >
+        <_filterIcon className="mr-2" /> Filters
+      </button>
+      {/* filter side bar */}
+      <div
+        ref={sidebarRef}
+        className={`${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } fixed inset-y-0 left-0 w-64 bg-white overflow-y-auto transition-transform duration-300 lg:static lg:translate-x-0`}
+      >
+        <FilterSideBar />
+      </div>
+      <div className="flex-grow p-4">
+        <h2 className="text-2xl uppercase mb-4">
+          {collectionsPageText.headerText}
+        </h2>
       </div>
     </div>
   );

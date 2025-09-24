@@ -374,4 +374,5 @@ export const myOrdersPageText = {
 // CollectionsPage text
 export const collectionsPageText = {
   icons: [FaFilter],
+  headerText: "All collection",
 };
