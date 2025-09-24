@@ -50,7 +50,7 @@ const Navbar = () => {
           {navbarText.navbarLinksText.map((link, id) => (
             <Link
               key={id}
-              to="#"
+              to="/collections/all"
               className="text-gray-700 hover:text-black text-sm  font-medium uppercase"
             >
               {link}
