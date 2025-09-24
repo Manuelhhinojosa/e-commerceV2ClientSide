@@ -16,6 +16,7 @@ import {
   HiArrowPathRoundedSquare,
 } from "react-icons/hi2";
 import { FiChevronLeft, FiChevronRight, FiPhoneCall } from "react-icons/fi";
+import { FaFilter } from "react-icons/fa";
 
 // Topbar component
 export const topbarText = {
@@ -368,4 +369,9 @@ export const myOrdersPageText = {
   tdTextNoOdersMessage: "You don't have any orders.",
   paidText: "Paid",
   notPaidText: "Pending",
+};
+
+// CollectionsPage text
+export const collectionsPageText = {
+  icons: [FaFilter],
 };
