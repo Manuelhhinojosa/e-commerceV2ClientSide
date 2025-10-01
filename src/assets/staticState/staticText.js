@@ -382,6 +382,15 @@ export const collectionsPageText = {
 
 // FilterSideBar component text
 export const filterSideBarText = {
+  headerText: "Filter",
+  categoryFilterText: "Category",
+  genderFilterText: "Gender",
+  colorFilterText: "Color",
+  sizeFilterText: "Size",
+  materialFilterText: "Material",
+  brandFilterText: "Brand",
+  priceRangeFilterText: "Price Range",
+  //   mock data for dev
   categories: ["Top Wear", "Bottom Wear"],
   colors: [
     "Red",
@@ -389,7 +398,7 @@ export const filterSideBarText = {
     "Black",
     "Green",
     "Yellow",
-    "Grat",
+    "Gray",
     "White",
     "Pink",
     "Beige",
