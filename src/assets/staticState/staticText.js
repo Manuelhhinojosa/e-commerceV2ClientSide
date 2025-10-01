@@ -418,3 +418,11 @@ export const filterSideBarText = {
   brands: ["Brand1", "Brand2", "Brand3", "Brand4", "Brand5", "Brand6"],
   genders: ["Men", "Women"],
 };
+
+// SortOption component text
+export const sortOptionsText = {
+  valueText1: "Default",
+  valueText2: "Price: low to High",
+  valueText3: "Price: High to Low",
+  valueText4: "Popularity",
+};
