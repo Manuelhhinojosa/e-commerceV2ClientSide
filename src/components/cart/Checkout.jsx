@@ -33,8 +33,11 @@ const cart = {
 
 // Checkout component function
 const Checkout = () => {
+  // react router hook
   const navigate = useNavigate();
+  //   logic
   const [checkId, setCheckId] = useState(null);
+  //   shipping address
   const [shippingAddress, setShippingAddress] = useState({
     firstName: "",
     lastName: "",
@@ -46,7 +49,7 @@ const Checkout = () => {
   });
 
   //   functions
-  // handle chekcout button
+  // handle chekcout paypal buttons display
   const handleCreateCheckout = (e) => {
     e.preventDefault();
     setCheckId(1);
@@ -231,7 +234,7 @@ const Checkout = () => {
             ) : (
               <div>
                 <PaypalButton
-                  amount={100}
+                  amount={cart.totalPrice}
                   onSuccess={handlePaymentSuccess}
                   onError={(err) => alert("payment failed. Try again")}
                 />
@@ -239,6 +242,45 @@ const Checkout = () => {
             )}
           </div>
         </form>
+      </div>
+
+      {/* Right section */}
+      <div className="bg-gray-50 p-6 rounded-lg">
+        <h3 className="text-lg mb-4">{checkoutText.orderSummaryText}</h3>
+        <div className="boder-t py-4 mb-4">
+          {cart.products.map((product, i) => (
+            <div
+              key={i}
+              className="flex items-start justify-between py-2 border-b"
+            >
+              <div className="flex items-start">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-20 h-24 object-cover mr-4"
+                />
+                <div>
+                  <h3 className="text-md ">{product.name}</h3>
+                  <p className="text-gray-500">Size: {product.size}</p>
+                  <p className="text-gray-500">Color: {product.color}</p>
+                </div>
+              </div>
+              <p className="text-xl">${product.price.toLocaleString()}</p>
+            </div>
+          ))}
+        </div>
+        <div className="flex justify-between items-center text-lg mb-4">
+          <p>{checkoutText.subtotalText}</p>
+          <p>${cart.totalPrice.toLocaleString()}</p>
+        </div>
+        <div className="flex justify-between items-center text-lg">
+          <p>{checkoutText.shippingText}</p>
+          <p>Free</p>
+        </div>
+        <div className="flex justify-between items-center text-lg mt-4 border-t pt-4">
+          <p>{checkoutText.totalText}</p>
+          <p>${cart.totalPrice}</p>
+        </div>
       </div>
     </div>
   );

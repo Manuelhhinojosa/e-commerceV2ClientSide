@@ -442,4 +442,9 @@ export const checkoutText = {
   phoneText: "Phone Number",
   continueToPaymentBtnText: "Continue to payment",
   payWithPaypalText: "Pay with Paypal",
+  orderSummaryText: "Order Summary",
+  subtotalText: "Subtotal",
+  shippingText: "Shipping",
+  freeText: "Free",
+  totalText: "Total",
 };
