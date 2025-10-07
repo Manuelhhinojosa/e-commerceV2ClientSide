@@ -426,3 +426,20 @@ export const sortOptionsText = {
   valueText3: "Price: High to Low",
   valueText4: "Popularity",
 };
+
+// Checkout component text
+export const checkoutText = {
+  headerText: "Checkout",
+  contactDetailsText: "Contact Details",
+  emailText: "Email",
+  deliveryText: "Delivery",
+  firstNameText: "First Name",
+  lasttNameText: "Last Name",
+  addressText: "Address",
+  cityText: "City",
+  postalCodeText: "Postal Code",
+  countryText: "Country",
+  phoneText: "Phone Number",
+  continueToPaymentBtnText: "Continue to payment",
+  payWithPaypalText: "Pay with Paypal",
+};

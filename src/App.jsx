@@ -11,6 +11,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import CollectionsPage from "./pages/CollectionsPage";
+import ProductDetails from "./components/products/ProductDetails";
+import Checkout from "./components/cart/Checkout";
 
 // App component function
 const App = () => {
@@ -25,6 +27,8 @@ const App = () => {
           <Route path="register" element={<Register />} />
           <Route path="profile" element={<Profile />} />
           <Route path="collections/:collection" element={<CollectionsPage />} />
+          <Route path="product/:id" element={<ProductDetails />} />
+          <Route path="checkout" element={<Checkout />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -2,6 +2,9 @@
 //   Static state (text)
 import { cartDrawerText } from "../../assets/staticState/staticText";
 
+// React router hooks
+import { useNavigate } from "react-router-dom";
+
 // Components
 import CartContents from "../cart/CartContents";
 
@@ -11,6 +14,12 @@ const CartDrawer = ({ drawerOpen, toggleCartDrawer }) => {
   //   Static state (text)
   //   icons
   const _closeIcon = cartDrawerText.icons[0];
+  //   React router hooks
+  const navigate = useNavigate();
+
+  //   functions
+  // to hanlde checkout button
+  const handleCheckout = () => navigate("/checkout");
 
   return (
     // main container
@@ -34,7 +43,10 @@ const CartDrawer = ({ drawerOpen, toggleCartDrawer }) => {
       </div>
       {/* Checkout button */}
       <div className="p-4 bg-white sticky bottom-0 ">
-        <button className="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
+        <button
+          onClick={handleCheckout}
+          className="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition"
+        >
           {cartDrawerText.checkooutBtnText}
         </button>
         <p className="text-sm tracking-tighter text-gray-500 mt-2 text-center">
