@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 // react hooks
 import { useState } from "react";
 
+// components
+import PaypalButton from "./PaypalButton";
+
 // State
 // static state (text)
 import { checkoutText } from "../../assets/staticState/staticText";
@@ -43,10 +46,16 @@ const Checkout = () => {
   });
 
   //   functions
-  // handle chekcout
+  // handle chekcout button
   const handleCreateCheckout = (e) => {
     e.preventDefault();
-    setCheckId(1);
+    // setCheckId(1);
+  };
+
+  //   handle successfull payment
+  const handlePaymentSuccess = (details) => {
+    console.log("payment successful", details);
+    navigate("/order-confirmation");
   };
 
   //   return
@@ -223,7 +232,11 @@ const Checkout = () => {
               <div>
                 <h3 className="text-lg mb-4">
                   {checkoutText.payWithPaypalText}
-                  {/* PaypayButton component */}
+                  <PaypalButton
+                    amount={100}
+                    onSuccess={handlePaymentSuccess}
+                    onError={(err) => alert("payment failed. Try again")}
+                  />
                 </h3>
               </div>
             )}
