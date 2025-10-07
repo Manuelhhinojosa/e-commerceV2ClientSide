@@ -49,7 +49,7 @@ const Checkout = () => {
   // handle chekcout button
   const handleCreateCheckout = (e) => {
     e.preventDefault();
-    // setCheckId(1);
+    setCheckId(1);
   };
 
   //   handle successfull payment
@@ -77,7 +77,7 @@ const Checkout = () => {
             <input
               type="email"
               value="test@test.test"
-              className="w-full border rounded"
+              className="w-full h-10 text-center border rounded"
               disabled
             />
           </div>
@@ -230,14 +230,11 @@ const Checkout = () => {
               </button>
             ) : (
               <div>
-                <h3 className="text-lg mb-4">
-                  {checkoutText.payWithPaypalText}
-                  <PaypalButton
-                    amount={100}
-                    onSuccess={handlePaymentSuccess}
-                    onError={(err) => alert("payment failed. Try again")}
-                  />
-                </h3>
+                <PaypalButton
+                  amount={100}
+                  onSuccess={handlePaymentSuccess}
+                  onError={(err) => alert("payment failed. Try again")}
+                />
               </div>
             )}
           </div>
