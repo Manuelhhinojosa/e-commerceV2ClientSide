@@ -19,7 +19,10 @@ const CartDrawer = ({ drawerOpen, toggleCartDrawer }) => {
 
   //   functions
   // to hanlde checkout button
-  const handleCheckout = () => navigate("/checkout");
+  const handleCheckout = () => {
+    toggleCartDrawer();
+    navigate("/checkout");
+  };
 
   return (
     // main container

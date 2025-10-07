@@ -13,6 +13,7 @@ import Profile from "./pages/Profile";
 import CollectionsPage from "./pages/CollectionsPage";
 import ProductDetails from "./components/products/ProductDetails";
 import Checkout from "./components/cart/Checkout";
+import OrderConfirmationPage from "./pages/OrderConfirmationPage";
 
 // App component function
 const App = () => {
@@ -29,6 +30,10 @@ const App = () => {
           <Route path="collections/:collection" element={<CollectionsPage />} />
           <Route path="product/:id" element={<ProductDetails />} />
           <Route path="checkout" element={<Checkout />} />
+          <Route
+            path="order-confirmation"
+            element={<OrderConfirmationPage />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>

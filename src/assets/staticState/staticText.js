@@ -448,3 +448,14 @@ export const checkoutText = {
   freeText: "Free",
   totalText: "Total",
 };
+
+// Order confimation page text
+export const orderConfimationPageText = {
+  thankyouMessage: "Thank you for your order.",
+  orderIdText: "Order ID",
+  orderDateText: "Order date",
+  estimatedDeliveryText: "Estimated Delivery",
+  quantityText: "Qty",
+  paymentText: "Payment",
+  deliveryText: "Delivery",
+};
