@@ -1,6 +1,9 @@
 // React hooks
 import { useState, useEffect } from "react";
 
+// react router hooks
+import { useNavigate } from "react-router-dom";
+
 // State
 // Static state (text)
 import { myOrdersPageText } from "../assets/staticState/staticText";
@@ -11,8 +14,11 @@ const MyOrdersPage = () => {
   // for user's orders
   const [orders, setOrders] = useState([]);
 
+  //   react router hooks
+  const navigate = useNavigate();
+
   //   functions
-  // to simulate the loading of orders
+  // to simulate the loading of orders for dev
   useEffect(() => {
     setTimeout(() => {
       const mockOrders = [
@@ -48,6 +54,11 @@ const MyOrdersPage = () => {
       1000;
   }, []);
 
+  //   handle row click
+  const handleRowClick = (orderId) => {
+    navigate(`/order/${orderId}`);
+  };
+
   // return
   return (
     <div className="max-w-7xl mx-auto p-4 sm:p-6">
@@ -72,6 +83,7 @@ const MyOrdersPage = () => {
               orders.map((order) => (
                 <tr
                   key={order._id}
+                  onClick={() => handleRowClick(order._id)}
                   className="border-b hover:border-b-gray-50 cursor-pointer"
                 >
                   <td className="py-2 px-2 sm:py-4 sm:px-4">
