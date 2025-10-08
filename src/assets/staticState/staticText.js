@@ -459,3 +459,28 @@ export const orderConfimationPageText = {
   paymentText: "Payment",
   deliveryText: "Delivery",
 };
+
+// order details page text
+export const orderDetailsPageText = {
+  header: "Order Details",
+  noOrderDetailsText: "No order details found",
+  orderIdText: "Order ID",
+  approvedText: "Approved",
+  pendingText: "Pending",
+  deliveryPendingText: "Delivery Pending",
+  deliveredText: "Delivered",
+  paymentInfoText: "Payment Info",
+  paymentMethodText: "Payment Method",
+  statusText: "Status",
+  paidText: "Paid",
+  notPaidText: "Not Paid",
+  shippingInfoText: "Shipping Info",
+  shippingMethodText: "Shipping Method",
+  addressText: "Address",
+  producstText: "Products",
+  tableText1: "Name",
+  tableText2: "Unit Price",
+  tableText3: "Qty",
+  tableText4: "Total",
+  backBtnText: "Back To My Orders",
+};
