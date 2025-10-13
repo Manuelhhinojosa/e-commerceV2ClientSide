@@ -16,7 +16,15 @@ import {
   HiArrowPathRoundedSquare,
 } from "react-icons/hi2";
 import { FiChevronLeft, FiChevronRight, FiPhoneCall } from "react-icons/fi";
-import { FaFilter, FaBars } from "react-icons/fa";
+import {
+  FaFilter,
+  FaBars,
+  FaUser,
+  FaClipboardList,
+  FaStore,
+  FaSignOutAlt,
+} from "react-icons/fa";
+import { FaBoxOpen } from "react-icons/fa6";
 
 // Topbar component
 export const topbarText = {
@@ -489,4 +497,17 @@ export const orderDetailsPageText = {
 export const adminLayoutText = {
   icons: [FaBars],
   headerText: "Admin Dashboard",
+  logo: "Logo",
+};
+
+// admins side bar page text
+export const adminSidebarText = {
+  logo: "Logo",
+  headerText: "Admin Dashboard",
+  icons: [FaUser, FaBoxOpen, FaClipboardList, FaStore, FaSignOutAlt],
+  usersText: "Users",
+  productsText: "Products",
+  ordersText: "Orders",
+  shopText: "Shop",
+  lotoutText: "Logout",
 };

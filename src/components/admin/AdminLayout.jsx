@@ -1,6 +1,9 @@
 // react hooks
 import { useState } from "react";
 
+// react router hooks
+import { Outlet } from "react-router-dom";
+
 // components
 import AdminSidebar from "./AdminSidebar";
 
@@ -23,15 +26,19 @@ const AdminLayout = () => {
   };
   // return
   return (
-    <div className="min-h-screen flex flex-col md:flex-row relative">
+    <div className="min-h-screen flex flex-col md:flex-row relative ">
       {/* mobile toogle button */}
-      <div className="flex md:hidden p-4 bg-gray-900 text-white z-20">
-        <button onClick={toggleSidebar}>
-          <_barsIcon size={24} />
-        </button>
-        <h1 className="ml-4 text-xl font-medium">
-          {adminLayoutText.headerText}
-        </h1>
+      <div className="flex justify-between  md:hidden p-4 bg-gray-900 text-white z-20">
+        <div className="flex">
+          <button onClick={toggleSidebar}>
+            <_barsIcon size={24} />
+          </button>
+          <h1 className="ml-4 text-xl font-medium">
+            {adminLayoutText.headerText}
+          </h1>
+        </div>
+
+        <h1>{adminLayoutText.logo}</h1>
       </div>
 
       {/* overlay for mobile sidebar */}
@@ -50,6 +57,11 @@ const AdminLayout = () => {
       >
         {/* AdminSidebar component */}
         <AdminSidebar />
+      </div>
+
+      {/* Main content */}
+      <div className="flex-grow p-6 overflow-auto">
+        <Outlet />
       </div>
     </div>
   );
