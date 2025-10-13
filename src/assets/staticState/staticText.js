@@ -500,7 +500,7 @@ export const adminLayoutText = {
   logo: "Logo",
 };
 
-// admins side bar page text
+// admin side bar page text
 export const adminSidebarText = {
   logo: "Logo",
   headerText: "Admin Dashboard",
@@ -510,4 +510,19 @@ export const adminSidebarText = {
   ordersText: "Orders",
   shopText: "Shop",
   lotoutText: "Logout",
+};
+
+export const adminHomePageText = {
+  headerText: "Admin Dashboard",
+  revenueText: "Revenue",
+  totalOrdersText: "Total Orders",
+  manageOrdersBtnText: "Manage Orders",
+  totalProductsText: "Total Products",
+  manageProductsBtnText: "Manage Products",
+  recentOrdersText: "Recent orders",
+  orderIdText: "Order ID",
+  userText: "User",
+  totalPriceText: "Total Price",
+  statusText: "Status",
+  noRecentOrdersFoundText: "No Recent Orders Found",
 };
