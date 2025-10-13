@@ -58,8 +58,15 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* icons */}
+        {/* right icons */}
         <div className="flex items-center space-x-4">
+          {/* admin button */}
+          <Link
+            to="/admin"
+            className="block bg-black px-2 rounded text-sm text-white"
+          >
+            Admin
+          </Link>
           {/* User icon */}
           <Link to="/profile" className="hover:text-black">
             <_userIcon className="h-6 w-6 text-gray-700" />

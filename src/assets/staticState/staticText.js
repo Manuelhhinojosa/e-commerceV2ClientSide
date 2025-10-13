@@ -16,7 +16,7 @@ import {
   HiArrowPathRoundedSquare,
 } from "react-icons/hi2";
 import { FiChevronLeft, FiChevronRight, FiPhoneCall } from "react-icons/fi";
-import { FaFilter } from "react-icons/fa";
+import { FaFilter, FaBars } from "react-icons/fa";
 
 // Topbar component
 export const topbarText = {
@@ -483,4 +483,10 @@ export const orderDetailsPageText = {
   tableText3: "Qty",
   tableText4: "Total",
   backBtnText: "Back To My Orders",
+};
+
+// admin layout page text
+export const adminLayoutText = {
+  icons: [FaBars],
+  headerText: "Admin Dashboard",
 };
