@@ -512,6 +512,7 @@ export const adminSidebarText = {
   lotoutText: "Logout",
 };
 
+// admin home page text
 export const adminHomePageText = {
   headerText: "Admin Dashboard",
   revenueText: "Revenue",
@@ -525,4 +526,17 @@ export const adminHomePageText = {
   totalPriceText: "Total Price",
   statusText: "Status",
   noRecentOrdersFoundText: "No Recent Orders Found",
+};
+
+// user management page text
+export const managementPageText = {
+  header: "User Management",
+  addNewUserText: "Add New User",
+  nameLabelText: "Name",
+  emailLabelText: "Email",
+  passwordLabelText: "Password",
+  roleLabelText: "Role",
+  customerText: "Customer",
+  adminText: "Admin",
+  addUserBtnText: "Add User",
 };
