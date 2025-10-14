@@ -556,3 +556,16 @@ export const productManagementPageText = {
   deleteConfirmationMessage: "Are you sure you want to delete this product",
   noProductsFoundText: "No Products Found",
 };
+
+export const editProductPageText = {
+  header: "Edit Product",
+  nameLabelText: "Product Name",
+  descriptionLabelText: "Description",
+  priceLabelText: "Price",
+  countInStockLabelText: "Count in Stock",
+  skuLabelText: "SKU",
+  sizesLabelText: "Sizes",
+  colorsLabelText: "Colors",
+  uploadImgLabelText: "Upload Image",
+  btnText: "Update Product",
+};
