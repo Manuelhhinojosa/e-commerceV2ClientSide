@@ -557,6 +557,7 @@ export const productManagementPageText = {
   noProductsFoundText: "No Products Found",
 };
 
+// edit product page text
 export const editProductPageText = {
   header: "Edit Product",
   nameLabelText: "Product Name",
@@ -568,4 +569,20 @@ export const editProductPageText = {
   colorsLabelText: "Colors",
   uploadImgLabelText: "Upload Image",
   btnText: "Update Product",
+};
+
+// order management page text
+export const orderManagementPageText = {
+  header: "Order Management",
+  orderIdText: "Order ID",
+  customerText: "Customer",
+  totalPriceText: "Total Price",
+  statusText: "Status",
+  actionsText: "Actions",
+  processingText: "Processing",
+  shippedText: "Shipped",
+  deliveredText: "Delivered",
+  cancelledText: "Cancelled",
+  markStatusText: "Mark as delivered",
+  noOrdersText: "No Orders Were Found",
 };
