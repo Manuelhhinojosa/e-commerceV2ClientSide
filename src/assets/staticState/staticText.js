@@ -529,7 +529,7 @@ export const adminHomePageText = {
 };
 
 // user management page text
-export const managementPageText = {
+export const userManagementPageText = {
   header: "User Management",
   addNewUserText: "Add New User",
   nameLabelText: "Name",
@@ -539,4 +539,7 @@ export const managementPageText = {
   customerText: "Customer",
   adminText: "Admin",
   addUserBtnText: "Add User",
+  actionsLabelText: "Actions",
+  deleteText: "Delete",
+  deleteConfirmationMessage: "Are you sure you want to delete this user",
 };
