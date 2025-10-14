@@ -33,6 +33,7 @@ const UserManagment = () => {
       [e.target.name]: e.target.value,
     });
   };
+
   //   handle form submit for creating new user
   const handleSubmit = (e) => {
     e.preventDefault();

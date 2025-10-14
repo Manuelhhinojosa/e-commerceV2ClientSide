@@ -543,3 +543,16 @@ export const userManagementPageText = {
   deleteText: "Delete",
   deleteConfirmationMessage: "Are you sure you want to delete this user",
 };
+
+// product management page text
+export const productManagementPageText = {
+  header: "Product Management",
+  nameText: "Name",
+  priceText: "Price",
+  skuText: "SKU",
+  actionsText: "Actions",
+  editText: "Edit",
+  deleteText: "Delete",
+  deleteConfirmationMessage: "Are you sure you want to delete this product",
+  noProductsFoundText: "No Products Found",
+};
